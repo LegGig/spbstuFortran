@@ -1,0 +1,49 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: llvm.directive.region.entry
+
+DEAD STATIC FUNC: llvm.directive.region.exit
+
+DEAD STATIC FUNC: llvm.experimental.noalias.scope.decl
+
+COMPILE FUNC: calculate_mp_sort2darraybyrows_
+   -> DELETE: llvm.directive.region.entry /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> DELETE: llvm.directive.region.entry /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> BROKER: __kmpc_fork_teams /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)(calculate_mp_sort2darraybyrows_.DIR.OMP.TEAMS.2)
+
+COMPILE FUNC: calculate._
+
+COMPILE FUNC: calculate_mp_customminloc_
+
+COMPILE FUNC: calculate_mp_sortarray_
+   -> llvm.smax.i64 /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (24,10)
+   -> INLINE: calculate_mp_customminloc_ /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (24,19) (60<=250)
+   -> DELETE: llvm.experimental.noalias.scope.decl /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (24,19)
+
+COMPILE FUNC: calculate_mp_sort2darraybyrows_.DIR.OMP.DISTRIBUTE.PARLOOP.8.split105.split
+   -> DELETE: llvm.directive.region.entry /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> DELETE: llvm.directive.region.exit /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> llvm.stacksave /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,11)
+   -> DELETE: llvm.smax.i64 /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,11)
+   -> llvm.smax.i32 /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,22)
+   -> INLINE: calculate_mp_sortarray_ /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,22) (195<=250)
+      -> llvm.smax.i64 /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (24,10)
+      -> INLINE: calculate_mp_customminloc_ /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (24,19) (60<=250)
+   -> llvm.stackrestore /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,11)
+   -> EXTERN: __kmpc_for_static_fini /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> EXTERN: __kmpc_dist_for_static_init_4 /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> llvm.smax.i64 /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (24,10)
+   -> llvm.stacksave /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,11)
+   -> llvm.stackrestore /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (12,11)
+
+COMPILE FUNC: calculate_mp_sort2darraybyrows_.DIR.OMP.TEAMS.2
+   -> DELETE: llvm.directive.region.exit /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> DELETE: llvm.directive.region.entry /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)
+   -> BROKER: __kmpc_fork_call /tmp/ifx1326826127HbVGw8/ifxpYplAy.i90 (11,7)(calculate_mp_sort2darraybyrows_.DIR.OMP.DISTRIBUTE.PARLOOP.8.split105.split)
+
+---- End Inlining Report ------

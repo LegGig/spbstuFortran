@@ -1,0 +1,20 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+COMPILE FUNC: MAIN__
+   -> EXTERN: for_set_fpe_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (1,9)
+   -> EXTERN: for_set_reentrancy /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (1,9)
+   -> EXTERN: io_func_mp_read2darray_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (15,9)
+   -> EXTERN: io_func_mp_output2darray_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (17,9)
+   -> EXTERN: calculate_mp_sort2darraybyrows_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (19,9)
+   -> EXTERN: io_func_mp_outputemptyline_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (21,9)
+   -> EXTERN: io_func_mp_output2darray_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (22,9)
+   -> EXTERN: io_func_mp_outputemptyline_ /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (23,9)
+   -> llvm.memset.p0.i64 /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (9,34)
+   -> llvm.memset.p0.i64 /tmp/ifx1133946582THIm3o/ifxXb36n8.i90 (9,34)
+
+---- End Inlining Report ------

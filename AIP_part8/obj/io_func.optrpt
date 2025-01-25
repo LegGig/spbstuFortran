@@ -1,0 +1,110 @@
+Global optimization report for : io_func._
+=================================================================
+
+Global optimization report for : io_func_mp_read2darray_
+
+LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (20, 10)
+<Multiversioned v1>
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+LOOP END
+
+LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (20, 23)
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+LOOP END
+
+LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (20, 10)
+
+    LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (20, 10)
+    <Multiversioned v2>
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    LOOP END
+
+    LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (20, 23)
+    <Multiversioned v2>
+        remark #15319: Loop was not vectorized: novector directive used
+    LOOP END
+
+    LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (20, 23)
+    <Multiversioned v2>
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : io_func_mp_output2darray_
+
+LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (34, 7)
+
+    LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (35, 10)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at /home/hayatto/Рабочий стол/Сданы/AIP/part8/src/io_func.f90 (35, 10)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : io_func_mp_outputemptyline_
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+COMPILE FUNC: io_func._
+
+COMPILE FUNC: io_func_mp_read2darray_
+   -> EXTERN: for_open /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (13,7)
+   -> EXTERN: for_read_seq_lis /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (14,10)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (14,10)
+   -> llvm.smax.i32 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (17,10)
+   -> llvm.smax.i32 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (17,10)
+   -> EXTERN: for_check_mult_overflow64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (17,10)
+   -> EXTERN: for_alloc_allocatable_handle /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (17,10)
+   -> llvm.memset.p0.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (18,10)
+   -> EXTERN: for_read_seq_lis /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> llvm.stacksave /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,23)
+   -> llvm.smax.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> llvm.stackrestore /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,23)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> EXTERN: for_close /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (22,14)
+   -> DELETE: llvm.memcpy.p0.p0.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> llvm.memcpy.p0.p0.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> DELETE: llvm.memcpy.p0.p0.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> llvm.memcpy.p0.p0.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> DELETE: llvm.ssa.copy.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,10)
+   -> DELETE: llvm.ssa.copy.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (20,23)
+
+COMPILE FUNC: io_func_mp_output2darray_
+   -> EXTERN: for_open /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (33,7)
+   -> llvm.stacksave /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,10)
+   -> llvm.smax.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,10)
+   -> llvm.log10.f64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,27)
+   -> llvm.floor.f64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,27)
+   -> EXTERN: environment_mp_string_plus_int_ /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,24)
+   -> EXTERN: for_concat /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,27)
+   -> EXTERN: for_write_seq_fmt /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,10)
+   -> llvm.stackrestore /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,10)
+   -> EXTERN: for_close /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (37,14)
+   -> DELETE: llvm.ssa.copy.i64 /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (35,10)
+
+COMPILE FUNC: io_func_mp_outputemptyline_
+   -> EXTERN: for_open /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (43,7)
+   -> EXTERN: for_write_seq_lis /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (44,10)
+   -> EXTERN: for_close /tmp/ifx15341624654WoDoN/ifxtU5dTG.i90 (45,14)
+
+---- End Inlining Report ------

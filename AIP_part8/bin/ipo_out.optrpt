@@ -1,0 +1,173 @@
+Global optimization report for : calculate_mp_sort2darraybyrows_.DIR.OMP.TEAMS.2
+=================================================================
+
+Global optimization report for : calculate_mp_sort2darraybyrows_.DIR.OMP.DISTRIBUTE.PARLOOP.8.split105.split
+
+LOOP BEGIN at src/calculate.f90 (11, 7)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at src/calculate.f90 (22, 7)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (22, 7)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (22, 7)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 2
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 5.000000 
+        remark #15477: vector cost: 4.078125 
+        remark #15478: estimated potential speedup: 1.218750 
+        remark #15309: vectorization support: normalized vectorization overhead 0.484375
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (22, 7)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (23, 7)
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at src/calculate.f90 (39, 7)
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between minind (40:22) and minind (40:9) 
+            remark #15346: vector dependence: assumed FLOW dependence between minind (40:22) and minind (40:22) 
+            remark #25439: Loop unrolled with remainder by 8
+        LOOP END
+
+        LOOP BEGIN at src/calculate.f90 (39, 7)
+        <Remainder loop>
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (12, 11)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (12, 11)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (12, 11)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 2
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 5.000000 
+        remark #15477: vector cost: 4.062500 
+        remark #15478: estimated potential speedup: 1.218750 
+        remark #15309: vectorization support: normalized vectorization overhead 0.484375
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/calculate.f90 (12, 11)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+
+LOOP BEGIN at src/calculate.f90 (11, 7)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at src/calculate.f90 (11, 7)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Global optimization report for : MAIN__
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: calculate_mp_sort2darraybyrows_
+
+DEAD STATIC FUNC: llvm.ssa.copy.i32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+COMPILE FUNC: calculate_mp_sort2darraybyrows_.DIR.OMP.DISTRIBUTE.PARLOOP.8.split105.split
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.smax.i64 ld-temp.o (24,10)
+   -> DELETE: llvm.smax.i64 ld-temp.o (24,10)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> EXTERN: __kmpc_for_static_fini ld-temp.o (11,7)
+   -> EXTERN: __kmpc_dist_for_static_init_4 ld-temp.o (11,7)
+   -> llvm.smax.i32 ld-temp.o (12,22)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> llvm.stacksave ld-temp.o (12,11)
+   -> llvm.smax.i64 ld-temp.o (24,10)
+   -> llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.stacksave ld-temp.o (12,11)
+   -> DELETE: llvm.stackrestore ld-temp.o (12,11)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (12,11)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (43,7)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (40,22)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (29,8)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (12,11)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (11,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (11,7)
+   -> llvm.umin.i1 ld-temp.o (39,17)
+
+COMPILE FUNC: calculate_mp_sort2darraybyrows_.DIR.OMP.TEAMS.2
+   -> EXTERN: __kmpc_fork_call ld-temp.o (11,7)
+
+COMPILE FUNC: MAIN__
+   -> EXTERN: for_set_fpe_ ld-temp.o (1,9)
+   -> EXTERN: for_set_reentrancy ld-temp.o (1,9)
+   -> llvm.memset.p0.i64 ld-temp.o (9,34)
+   -> llvm.memset.p0.i64 ld-temp.o (9,34)
+   -> EXTERN: io_func_mp_read2darray_ ld-temp.o (15,9)
+   -> EXTERN: io_func_mp_output2darray_ ld-temp.o (17,9)
+   -> INLINE: calculate_mp_sort2darraybyrows_ ld-temp.o (19,9) (-14960<=337)
+      -> EXTERN: __kmpc_fork_teams ld-temp.o (11,7)
+   -> EXTERN: io_func_mp_outputemptyline_ ld-temp.o (21,9)
+   -> EXTERN: io_func_mp_output2darray_ ld-temp.o (22,9)
+   -> EXTERN: io_func_mp_outputemptyline_ ld-temp.o (23,9)
+
+---- End Inlining Report ------
