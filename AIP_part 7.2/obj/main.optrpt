@@ -1,0 +1,46 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+COMPILE FUNC: MAIN__
+   -> EXTERN: for_set_fpe_ /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (1,9)
+   -> EXTERN: for_set_reentrancy /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (1,9)
+   -> EXTERN: for_open /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (13,4)
+   -> EXTERN: for_read_seq_lis /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (14,7)
+   -> llvm.smax.i32 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (16,7)
+   -> llvm.smax.i32 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (16,7)
+   -> EXTERN: for_check_mult_overflow64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (16,7)
+   -> EXTERN: for_alloc_allocatable_handle /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (16,7)
+   -> EXTERN: for_read_seq_lis /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> llvm.stacksave /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,21)
+   -> DELETE: llvm.smax.i64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> llvm.stackrestore /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,21)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> EXTERN: for_close /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (18,11)
+   -> llvm.stacksave /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,7)
+   -> llvm.smax.i64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,7)
+   -> llvm.log10.f64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,19)
+   -> llvm.floor.f64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,19)
+   -> EXTERN: environment_mp_string_plus_int_ /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,16)
+   -> EXTERN: for_concat /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,19)
+   -> EXTERN: for_write_seq_fmt /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,7)
+   -> llvm.stackrestore /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (21,7)
+   -> EXTERN: for_close /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (25,11)
+   -> llvm.sqrt.f32 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (27,15)
+   -> EXTERN: for_open /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (29,4)
+   -> EXTERN: for_write_seq_fmt /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (30,7)
+   -> EXTERN: for_close /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (31,11)
+   -> DELETE: llvm.memset.p0.i64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (8,31)
+   -> llvm.memset.p0.i64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (8,31)
+   -> llvm.stacksave /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,21)
+   -> llvm.smax.i64 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> llvm.stackrestore /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,21)
+   -> EXTERN: for_read_seq_lis_xmit /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+   -> llvm.smax.i32 /tmp/ifx1755859576H3yXka/ifxzU8KxP.i90 (17,7)
+
+---- End Inlining Report ------
