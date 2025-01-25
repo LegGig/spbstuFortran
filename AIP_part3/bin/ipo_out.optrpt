@@ -1,0 +1,158 @@
+Global optimization report for : MAIN__
+
+LOOP BEGIN at src/main.f90 (18, 7)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at src/main.f90 (18, 7)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at src/main.f90 (33, 8)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 2
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 4.015625 
+    remark #15478: estimated potential speedup: 1.234375 
+    remark #15309: vectorization support: normalized vectorization overhead 1.234375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: multiply reduction with value type float [src/main.f90:33:8]
+LOOP END
+
+LOOP BEGIN at src/main.f90 (33, 8)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Global optimization report for : MAIN__.DIR.OMP.PARALLEL.LOOP.2452.split455
+
+OMP PARALLEL DO BEGIN at src/main.f90 (25, 7)
+    remark #25595: OpenMP: SHARED clause for variable 'exercise_3_$NPADDED' has been changed to PRIVATE
+OMP PARALLEL DO END
+
+LOOP BEGIN at src/main.f90 (28, 7)
+    remark #25591: OpenMP: Outlined parallel loop
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at src/main.f90 (28, 7)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 4.000000 
+        remark #15477: vector cost: 3.796875 
+        remark #15478: estimated potential speedup: 1.031250 
+        remark #15309: vectorization support: normalized vectorization overhead 1.312500
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (28, 7)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (28, 19)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 4.000000 
+        remark #15477: vector cost: 3.515625 
+        remark #15478: estimated potential speedup: 1.109375 
+        remark #15309: vectorization support: normalized vectorization overhead 3.968750
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25587: Loop has reduction
+        remark #15590: vectorization support: multiply reduction with value type int32_t [src/main.f90:28:19]
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (28, 19)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: llvm.memset.p0.i64
+
+DEAD STATIC FUNC: llvm.ssa.copy.i32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+COMPILE FUNC: MAIN__.DIR.OMP.PARALLEL.LOOP.2452.split455
+   -> DELETE: llvm.smax.i32 ld-temp.o (26,4)
+   -> DELETE: llvm.stacksave ld-temp.o (28,7)
+   -> DELETE: llvm.smax.i32 ld-temp.o (28,7)
+   -> DELETE: llvm.stackrestore ld-temp.o (28,7)
+   -> EXTERN: __kmpc_for_static_init_4 ld-temp.o (28,7)
+   -> EXTERN: __kmpc_for_static_fini ld-temp.o (30,7)
+   -> llvm.stacksave ld-temp.o (28,7)
+   -> llvm.smax.i32 ld-temp.o (28,7)
+   -> DELETE: llvm.vector.reduce.mul.v4i32 ld-temp.o (28,19)
+   -> llvm.vector.reduce.mul.v4i32 ld-temp.o (28,19)
+   -> llvm.stackrestore ld-temp.o (28,7)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (28,7)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (28,7)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (28,19)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (28,19)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (26,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (26,4)
+
+COMPILE FUNC: MAIN__
+   -> EXTERN: for_set_fpe_ ld-temp.o (1,9)
+   -> EXTERN: for_set_reentrancy ld-temp.o (1,9)
+   -> DELETE: llvm.memset.p0.i64 ld-temp.o (8,37)
+   -> DELETE: llvm.memset.p0.i64 ld-temp.o (8,31)
+   -> EXTERN: for_open ld-temp.o (13,4)
+   -> EXTERN: for_read_seq_lis ld-temp.o (14,7)
+   -> llvm.smax.i32 ld-temp.o (16,7)
+   -> EXTERN: for_check_mult_overflow64 ld-temp.o (16,7)
+   -> EXTERN: for_alloc_allocatable_handle ld-temp.o (16,7)
+   -> llvm.smax.i32 ld-temp.o (17,7)
+   -> EXTERN: for_check_mult_overflow64 ld-temp.o (17,7)
+   -> EXTERN: for_alloc_allocatable_handle ld-temp.o (17,7)
+   -> DELETE: for_read_seq_lis ld-temp.o (19,10)
+   -> EXTERN: for_close ld-temp.o (21,11)
+   -> EXTERN: __kmpc_fork_call ld-temp.o (25,7)
+   -> EXTERN: for_open ld-temp.o (35,4)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (36,7)
+   -> llvm.stacksave ld-temp.o (37,7)
+   -> llvm.log10.f64 ld-temp.o (37,25)
+   -> llvm.floor.f64 ld-temp.o (37,25)
+   -> EXTERN: environment_mp_string_plus_int_ ld-temp.o (37,22)
+   -> EXTERN: for_concat ld-temp.o (37,25)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (37,7)
+   -> llvm.stackrestore ld-temp.o (37,7)
+   -> EXTERN: for_write_seq_lis ld-temp.o (38,7)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (39,7)
+   -> EXTERN: for_close ld-temp.o (40,11)
+   -> EXTERN: for_read_seq_lis ld-temp.o (19,10)
+   -> EXTERN: for_read_seq_lis ld-temp.o (19,10)
+   -> EXTERN: for_read_seq_lis ld-temp.o (19,10)
+   -> EXTERN: for_read_seq_lis ld-temp.o (19,10)
+   -> EXTERN: for_read_seq_lis ld-temp.o (19,10)
+   -> DELETE: llvm.vector.reduce.fmul.v2f32 ld-temp.o (33,8)
+   -> llvm.vector.reduce.fmul.v2f32 ld-temp.o (33,8)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (20,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (33,8)
+
+---- End Inlining Report ------
