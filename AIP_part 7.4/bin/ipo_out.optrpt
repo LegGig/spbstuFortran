@@ -1,0 +1,520 @@
+Global optimization report for : MAIN__
+
+LOOP BEGIN at src/main.f90 (33, 7)
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+LOOP END
+
+LOOP BEGIN at src/main.f90 (17, 7)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at src/main.f90 (22, 4)
+<Predicate Optimized v2>
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at src/main.f90 (22, 4)
+    <Multiversioned v2>
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 2
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 6.000000 
+        remark #15477: vector cost: 4.546875 
+        remark #15478: estimated potential speedup: 1.265625 
+        remark #15309: vectorization support: normalized vectorization overhead 0.437500
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (22, 4)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+
+LOOP BEGIN at src/main.f90 (22, 4)
+<Predicate Optimized v1>
+    remark #25423: Invariant If condition at line 22 hoisted out of this loop
+    remark #25423: Invariant If condition at line 0 hoisted out of this loop
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 8
+
+    LOOP BEGIN at src/main.f90 (22, 4)
+    <Multiversioned v1>
+        remark #25399: memcopy generated
+        remark #25562: The loop has been multiversioned for the small trip count
+    LOOP END
+LOOP END
+
+LOOP BEGIN at src/main.f90 (22, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at src/main.f90 (25, 7)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at src/main.f90 (52, 7)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 4.000000 
+    remark #15477: vector cost: 3.796875 
+    remark #15478: estimated potential speedup: 1.031250 
+    remark #15309: vectorization support: normalized vectorization overhead 1.312500
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at src/main.f90 (52, 7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at src/main.f90 (52, 7)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at src/main.f90 (52, 7)
+<Remainder loop>
+    remark #25585: Loop converted to switch
+LOOP END
+
+LOOP BEGIN at src/main.f90 (52, 7)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 4.000000 
+    remark #15477: vector cost: 3.328125 
+    remark #15478: estimated potential speedup: 1.187500 
+    remark #15309: vectorization support: normalized vectorization overhead 1.500000
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at src/main.f90 (52, 7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at src/main.f90 (55, 7)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at src/main.f90 (56, 19)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between (56:19) and (56:19) 
+        remark #15346: vector dependence: assumed FLOW dependence between (56:19) and (56:19) 
+        remark #15346: vector dependence: assumed FLOW dependence between (56:19) and (56:19) 
+        remark #15346: vector dependence: assumed FLOW dependence between (56:19) and (56:19) 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (56, 19)
+    <Remainder loop>
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (59, 13)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (59, 13)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (59, 13)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 4.000000 
+        remark #15477: vector cost: 3.312500 
+        remark #15478: estimated potential speedup: 1.187500 
+        remark #15309: vectorization support: normalized vectorization overhead 1.500000
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (59, 13)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (62, 13)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 4
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (62, 13)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (62, 13)
+        remark #25045: Fused Loops: 62,65
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 6.000000 
+        remark #15477: vector cost: 3.906250 
+        remark #15478: estimated potential speedup: 1.500000 
+        remark #15309: vectorization support: normalized vectorization overhead 1.265625
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 2 
+        remark #15451: unmasked unaligned unit stride stores: 2 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (65, 13)
+        remark #25046: Loop lost in Fusion
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (62, 13)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+
+LOOP BEGIN at src/main.f90 (33, 7)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+
+LOOP BEGIN at src/main.f90 (33, 7)
+
+    LOOP BEGIN at src/main.f90 (33, 7)
+    <Multiversioned v2>
+        remark #15319: Loop was not vectorized: novector directive used
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (33, 7)
+    <Multiversioned v2>
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 2
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 6.000000 
+        remark #15477: vector cost: 4.546875 
+        remark #15478: estimated potential speedup: 1.265625 
+        remark #15309: vectorization support: normalized vectorization overhead 0.437500
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (33, 7)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+
+LOOP BEGIN at src/main.f90 (78, 7)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 4.000000 
+    remark #15477: vector cost: 3.796875 
+    remark #15478: estimated potential speedup: 1.031250 
+    remark #15309: vectorization support: normalized vectorization overhead 1.312500
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at src/main.f90 (78, 7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at src/main.f90 (78, 7)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at src/main.f90 (78, 7)
+<Remainder loop>
+    remark #25585: Loop converted to switch
+LOOP END
+
+LOOP BEGIN at src/main.f90 (78, 7)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 4.000000 
+    remark #15477: vector cost: 3.328125 
+    remark #15478: estimated potential speedup: 1.187500 
+    remark #15309: vectorization support: normalized vectorization overhead 1.500000
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at src/main.f90 (78, 7)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at src/main.f90 (81, 7)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at src/main.f90 (82, 19)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between (82:19) and (82:19) 
+        remark #15346: vector dependence: assumed FLOW dependence between (82:19) and (82:19) 
+        remark #15346: vector dependence: assumed FLOW dependence between (82:19) and (82:19) 
+        remark #15346: vector dependence: assumed FLOW dependence between (82:19) and (82:19) 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (82, 19)
+    <Remainder loop>
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (85, 13)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (85, 13)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (85, 13)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 4.000000 
+        remark #15477: vector cost: 3.312500 
+        remark #15478: estimated potential speedup: 1.187500 
+        remark #15309: vectorization support: normalized vectorization overhead 1.500000
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 1 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (85, 13)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (88, 13)
+        remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+        remark #25439: Loop unrolled with remainder by 4
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (88, 13)
+    <Remainder loop>
+        remark #25585: Loop converted to switch
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (88, 13)
+        remark #25045: Fused Loops: 88,91
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 7.000000 
+        remark #15477: vector cost: 4.656250 
+        remark #15478: estimated potential speedup: 1.468750 
+        remark #15309: vectorization support: normalized vectorization overhead 1.062500
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 2 
+        remark #15451: unmasked unaligned unit stride stores: 2 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (91, 13)
+        remark #25046: Loop lost in Fusion
+    LOOP END
+
+    LOOP BEGIN at src/main.f90 (88, 13)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: exercise_7_4_29_IP_sortmatrixdec_
+
+DEAD STATIC FUNC: exercise_7_4_29_IP_sortmatrixinc_
+
+DEAD STATIC FUNC: llvm.ssa.copy.f32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+COMPILE FUNC: MAIN__
+   -> INLINE: exercise_7_4_29_IP_sortmatrixdec_ ld-temp.o (30,9) (-14515<=225)
+      -> llvm.smax.i64 ld-temp.o (45,20)
+      -> llvm.stacksave ld-temp.o (52,7)
+      -> llvm.smax.i32 ld-temp.o (52,7)
+      -> llvm.stackrestore ld-temp.o (52,7)
+      -> DELETE: llvm.smax.i64 ld-temp.o (56,10)
+      -> llvm.smax.i64 ld-temp.o (56,10)
+   -> INLINE: exercise_7_4_29_IP_sortmatrixinc_ ld-temp.o (36,12) (-14580<=225)
+      -> llvm.smax.i64 ld-temp.o (71,20)
+      -> llvm.stacksave ld-temp.o (78,7)
+      -> llvm.smax.i32 ld-temp.o (78,7)
+      -> llvm.stackrestore ld-temp.o (78,7)
+   -> EXTERN: for_set_fpe_ ld-temp.o (1,9)
+   -> EXTERN: for_set_reentrancy ld-temp.o (1,9)
+   -> llvm.memset.p0.i64 ld-temp.o (9,31)
+   -> llvm.memset.p0.i64 ld-temp.o (9,31)
+   -> llvm.memset.p0.i64 ld-temp.o (8,40)
+   -> llvm.memset.p0.i64 ld-temp.o (8,40)
+   -> DELETE: llvm.memset.p0.i64 ld-temp.o (8,31)
+   -> EXTERN: for_open ld-temp.o (13,4)
+   -> EXTERN: for_read_seq_lis ld-temp.o (14,7)
+   -> EXTERN: for_read_seq_lis_xmit ld-temp.o (14,7)
+   -> llvm.smax.i32 ld-temp.o (16,7)
+   -> llvm.smax.i32 ld-temp.o (16,7)
+   -> EXTERN: for_check_mult_overflow64 ld-temp.o (16,7)
+   -> EXTERN: for_alloc_allocatable_handle ld-temp.o (16,7)
+   -> EXTERN: for_read_seq_lis ld-temp.o (17,7)
+   -> EXTERN: for_read_seq_lis_xmit ld-temp.o (17,7)
+   -> EXTERN: for_read_seq_lis_xmit ld-temp.o (17,7)
+   -> EXTERN: for_close ld-temp.o (18,11)
+   -> llvm.smax.i64 ld-temp.o (21,4)
+   -> llvm.smax.i64 ld-temp.o (21,4)
+   -> EXTERN: for_check_mult_overflow64 ld-temp.o (21,4)
+   -> EXTERN: for_alloc_allocatable_handle ld-temp.o (21,4)
+   -> EXTERN: for_dealloc_allocatable_handle ld-temp.o (22,4)
+   -> EXTERN: for_realloc_lhs ld-temp.o (22,4)
+   -> EXTERN: for_open ld-temp.o (24,4)
+   -> llvm.stacksave ld-temp.o (25,7)
+   -> llvm.log10.f64 ld-temp.o (25,25)
+   -> llvm.floor.f64 ld-temp.o (25,25)
+   -> EXTERN: environment_mp_string_plus_int_ ld-temp.o (25,22)
+   -> EXTERN: for_concat ld-temp.o (25,25)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (25,7)
+   -> EXTERN: for_write_seq_fmt_xmit ld-temp.o (25,7)
+   -> EXTERN: for_write_seq_fmt_xmit ld-temp.o (25,7)
+   -> llvm.stackrestore ld-temp.o (25,7)
+   -> EXTERN: for_close ld-temp.o (26,11)
+   -> llvm.smax.i32 ld-temp.o (28,4)
+   -> EXTERN: for_check_mult_overflow64 ld-temp.o (28,4)
+   -> EXTERN: for_alloc_allocatable_handle ld-temp.o (28,4)
+   -> EXTERN: for_open ld-temp.o (32,4)
+   -> llvm.stacksave ld-temp.o (33,7)
+   -> llvm.log10.f64 ld-temp.o (33,26)
+   -> llvm.floor.f64 ld-temp.o (33,26)
+   -> EXTERN: environment_mp_string_plus_int_ ld-temp.o (33,23)
+   -> EXTERN: for_concat ld-temp.o (33,26)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (33,34)
+   -> llvm.log10.f64 ld-temp.o (33,34)
+   -> llvm.floor.f64 ld-temp.o (33,34)
+   -> llvm.smax.i32 ld-temp.o (33,31)
+   -> EXTERN: environment_mp_string_plus_int_ ld-temp.o (33,31)
+   -> EXTERN: for_concat ld-temp.o (33,34)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (33,7)
+   -> llvm.stacksave ld-temp.o (33,7)
+   -> llvm.smax.i64 ld-temp.o (33,7)
+   -> EXTERN: for_write_seq_fmt_xmit ld-temp.o (33,7)
+   -> llvm.stackrestore ld-temp.o (33,7)
+   -> llvm.stacksave ld-temp.o (33,7)
+   -> llvm.smax.i32 ld-temp.o (33,7)
+   -> EXTERN: for_write_seq_fmt_xmit ld-temp.o (33,7)
+   -> llvm.stackrestore ld-temp.o (33,7)
+   -> EXTERN: for_write_seq_fmt_xmit ld-temp.o (33,7)
+   -> llvm.stackrestore ld-temp.o (33,7)
+   -> llvm.stacksave ld-temp.o (34,7)
+   -> llvm.smax.i32 ld-temp.o (34,7)
+   -> llvm.log10.f64 ld-temp.o (34,76)
+   -> llvm.floor.f64 ld-temp.o (34,76)
+   -> EXTERN: environment_mp_string_plus_int_ ld-temp.o (34,73)
+   -> EXTERN: for_concat ld-temp.o (34,76)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (34,7)
+   -> llvm.stackrestore ld-temp.o (34,7)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (38,7)
+   -> llvm.smax.i32 ld-temp.o (39,7)
+   -> EXTERN: for_write_seq_fmt ld-temp.o (39,7)
+   -> EXTERN: for_close ld-temp.o (41,11)
+   -> DELETE: llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.memcpy.p0.p0.i64 ld-temp.o (33,7)
+   -> llvm.memcpy.p0.p0.i64 ld-temp.o (33,7)
+   -> DELETE: llvm.umax.i64 ld-temp.o (82,19)
+   -> llvm.umax.i64 ld-temp.o (82,19)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (22,4)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (52,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (52,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (52,7)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.f32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.f32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (56,19)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (56,19)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (56,19)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (59,13)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (62,13)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (65,13)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (67,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (67,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (33,7)
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o (78,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (78,7)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (78,7)
+   -> DELETE: llvm.ssa.copy.f32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.f32 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (82,19)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (85,13)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (88,13)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (91,13)
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o
+   -> DELETE: llvm.ssa.copy.i64 ld-temp.o (93,7)
+   -> llvm.experimental.noalias.scope.decl ld-temp.o (30,9)
+   -> llvm.experimental.noalias.scope.decl ld-temp.o (30,9)
+   -> llvm.stacksave ld-temp.o (45,34)
+   -> llvm.stackrestore ld-temp.o (69,4)
+   -> llvm.experimental.noalias.scope.decl ld-temp.o (36,12)
+   -> llvm.experimental.noalias.scope.decl ld-temp.o (36,12)
+   -> llvm.stacksave ld-temp.o (71,34)
+   -> llvm.stackrestore ld-temp.o (95,4)
+
+---- End Inlining Report ------
